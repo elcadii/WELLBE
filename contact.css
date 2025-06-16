@@ -1,0 +1,55 @@
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color: #000000;
+  padding: 0 15px;
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  transition: 0.4s ease-in-out;
+  z-index: 1000;
+  background-color: rgb(255, 255, 255);
+}
+header.active {
+  background-color: #ffffff;
+  height: 10vh;
+  transition: 0.4s ease-in-out;
+  box-shadow: 0 14px 10px rgba(0, 0, 0, 0.1);
+}
+
+header img {
+  width: 10%;
+}
+
+/* navbare link hover */
+nav a {
+  position: relative;
+  text-decoration: none;
+  color:#000000;
+  font-size: 16px;
+  text-transform: capitalize;
+  margin: 0 20px;
+  font-weight: 600;
+  transition: color 0.3s ease-in-out;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--primary-bleu);
+  transition: width 0.3s ease-in-out;
+}
+
+nav a:hover {
+  color: var(--primary-bleu);
+}
+
+nav a:hover::after {
+  width: 100%;
+}

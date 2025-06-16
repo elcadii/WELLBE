@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ========header========= -->
+    <header>
+      <img id="logo" src="img/logo-white.png" alt="logo" />
+      <nav>
+        <a href="index.html#Accueil">Accueil</a>
+        <a href="index.html#Professionnels">Professionnels</a>
+        <a href="index.html#Clients">Clients</a>
+        <a href="index.html#Pourquoi">Pourquoi nous rejoindre?</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+    <!-- =====container====== -->
+    <section class="hero" id="Accueil">
+      <div class="container">
+        <div
+          class="inline-block w-[36%] rounded-full px-2 py-1 sm:px-3 sm:py-2 text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-white bg-[#002366] mb-6"
+        >
+          La première plateforme beauté au Maroc
+        </div>
+        <h1
+          class="text-3xl sm:text-4xl lg:text-6xl font-bold text-white tracking-tight mb-6"
+        >
+          La beauté simplifiée
+        </h1>
+        <p class="text-sm sm:text-lg lg:text-xl text-white/90 mb-8 max-w-xl">
+          Réservez vos prestations beauté en quelques clics. À tout moment. Chez
+          les meilleurs professionnels.
+        </p>
+        <div class="flex justify-start gap-3">
+          <button
+            class="btn-shine inline-flex justify-center items-center px-6 py-3 border border-transparent text-base font-medium border-[#002366] rounded-md text-white bg-[#002366] hover:bg-[#001c52] transition-colors"
+          >
+            Je suis un professionnel
+          </button>
+          <button
+            class="btn-fill inline-flex justify-center items-center px-6 py-3 border border-white text-base font-medium rounded-md text-white hover:bg-white/10 transition-colors"
+          >
+            Je suis un client
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- section v2  -->
+    <section
+      id="Professionnels"
+      class="Professionals h-[80vh] ml-[20px] grid md:grid-cols-2 gap-12 items-center mb-2"
+    >
+      <div class="photos relative">
+        <div
+          class="w-[100%] h-[60vh] bg-[#002366] rounded-[90%_60%_90%_60%]"
+        ></div>
+        <img
+          class="img1 absolute top-[2%] w-[100%] rounded-[60%_80%_60%_90%]"
+          src="img/V2.svg"
+          alt=""
+        />
+      </div>
+      <div class="description_content">
+        <div
+          class="inline-block rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white bg-[#002366] mb-4"
+        >
+          Professionnels de la beauté
+        </div>
+        <h2 class="text-xl sm:text-3xl font-bold tracking-tight text-gray-900">
+          Transformez chaque opportunité en réservation
+        </h2>
+        <p class="mt-4 text-sm sm:text-lg text-gray-600">
+          Notre plateforme vous connecte directement avec une clientèle qui
+          recherche vos services à travers le Maroc. Augmentez votre visibilité,
+          simplifiez votre gestion et boostez votre croissance.
+        </p>
+      </div>
+    </section>
+
+    <!-- section v3 form  -->
+    <section
+      class="bg-gray-50 min-h-screen flex items-center justify-center p-4"
+    >
+      <div class="w-full max-w-2xl">
+        <!-- Form Container -->
+        <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+          <!-- Header Section -->
+          <div class="bg-blue-900 px-8 py-6 text-center">
+            <h1
+              class="text-base sm:text-xl font-semibold text-white text-center mb-2"
+            >
+              Rejoignez l'Avant-Première
+            </h1>
+            <p class="text-white/80 text-xs sm:text-sm text-center">
+              Complétez le formulaire ci-dessous pour obtenir un accès
+              prioritaire
+            </p>
+          </div>
+
+          <!-- Form Section -->
+          <div class="px-8 py-6">
+            <form id="ProfessionnelForm" method="post" class="space-y-6">
+              <!-- Row 1 -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label
+                    for="ProfessionnelFullname"
+                    class="flex items-center text-gray-600 text-sm font-medium mb-3"
+                  >
+                    <!-- SVG omitted for brevity -->
+                    Nom complet
+                  </label>
+                  <input
+                    id="ProfessionnelFullname"
+                    name="ProfessionnelFullname"
+                    type="text"
+                    placeholder="Entrez votre nom complet"
+                    class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg"
+                  />
+                  <div
+                    id="ProfessionnelFullnameError"
+                    class="text-red-500 text-sm mt-1"
+                  ></div>
+                </div>
+                <div>
+                  <label
+                    for="ProfessionnelEmail"
+                    class="flex items-center text-gray-600 text-sm font-medium mb-3"
+                  >
+                    Email professionnel
+                  </label>
+                  <input
+                    id="ProfessionnelEmail"
+                    name="ProfessionnelEmail"
+                    type="email"
+                    placeholder="Entrez votre email professionnel"
+                    class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg"
+                  />
+                  <div
+                    id="ProfessionnelEmailError"
+                    class="text-red-500 text-sm mt-1"
+                  ></div>
+                </div>
+              </div>
+
+              <!-- Row 2 -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label
+                    for="ProfessionnelPhone"
+                    class="flex items-center text-gray-600 text-sm font-medium mb-3"
+                  >
+                    Numéro de téléphone
+                  </label>
+                  <input
+                    id="ProfessionnelPhone"
+                    name="ProfessionnelPhone"
+                    type="tel"
+                    placeholder="Entrez votre numéro de téléphone"
+                    class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg"
+                  />
+                  <div
+                    id="ProfessionnelPhoneError"
+                    class="text-red-500 text-sm mt-1"
+                  ></div>
+                </div>
+                <div>
+                  <label
+                    for="ProfessionnelEtablissement"
+                    class="flex items-center text-gray-600 text-sm font-medium mb-3"
+                  >
+                    Nom de l'établissement
+                  </label>
+                  <input
+                    id="ProfessionnelEtablissement"
+                    name="ProfessionnelEtablissement"
+                    type="text"
+                    placeholder="Entrez le nom de votre établissement"
+                    class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg"
+                  />
+                  <div
+                    id="ProfessionnelEtablissementError"
+                    class="text-red-500 text-sm mt-1"
+                  ></div>
+                </div>
+              </div>
+
+              <!-- Row 3 -->
+              <div>
+                <label
+                  for="ProfessionnelCity"
+                  class="flex items-center text-gray-600 text-sm font-medium mb-3"
+                >
+                  Ville de l'établissement
+                </label>
+                <input
+                  id="ProfessionnelCity"
+                  name="ProfessionnelCity"
+                  type="text"
+                  placeholder="Entrez la ville de votre établissement"
+                  class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg"
+                />
+                <div
+                  id="ProfessionnelCityError"
+                  class="text-red-500 text-sm mt-1"
+                ></div>
+              </div>
+
+              <!-- Submit -->
+              <div class="pt-4">
+                <button
+                  type="submit"
+                  id="ProfessionnelFormBtn"
+                  class="w-full bg-blue-900 hover:bg-blue-800 text-white font-semibold py-4 px-6 rounded-lg"
+                >
+                  Je rejoins en avant-première
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Bottom Features -->
+        <div class="flex items-center justify-center space-x-8 mt-8">
+          <div class="flex items-center">
+            <div class="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
+            <span class="text-gray-600 text-sm font-medium">Sécurisé</span>
+          </div>
+          <div class="flex items-center">
+            <div class="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
+            <span class="text-gray-600 text-sm font-medium">Gratuit</span>
+          </div>
+          <div class="flex items-center">
+            <div class="w-2 h-2 bg-purple-500 rounded-full mr-2"></div>
+            <span class="text-gray-600 text-sm font-medium"
+              >Accès Prioritaire</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- section -->
+
+    <section class="max-w-7xl mx-auto px-4 my-8 sm:px-6 lg:px-8">
+      <!-- Header Section -->
+      <div class="text-center mb-12">
+        <div
+          class="inline-block bg-blue-800 text-white px-6 py-2 rounded-full text-sm font-medium mb-6"
+        >
+          POUR LES PROFESSIONNELS
+        </div>
+        <h1 class="text-xl sm:text-3xl font-bold text-gray-900 mb-4">
+          Transformez et faites décoller votre business
+        </h1>
+        <p class="text-xl text-gray-600 max-w-4xl mx-auto">
+          Boostez votre chiffre d'affaires, soyez encore plus visible, évitez
+          les no shows.
+        </p>
+      </div>
+
+      <!-- Cards Section -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Card 1: Boostez votre chiffre d'affaires -->
+        <div
+          class="wave-card playing relative bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl p-8 shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 overflow-hidden"
+        >
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="card-content text-center text-white">
+            <!-- Icon -->
+            <div class="mb-6">
+              <svg
+                class="w-12 h-12 mx-auto"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M7 14l3-3 3 3 5-5v4h2V7h-6v2l3 3-3 3-3-3-3 3v2z" />
+                <path d="M4 18h16v2H4z" />
+              </svg>
+            </div>
+            <!-- Title -->
+            <h3 class="text-2xl font-bold mb-4">
+              Boostez votre chiffre d'affaires
+            </h3>
+            <!-- Description -->
+            <p class="text-blue-100 leading-relaxed">
+              Gagnez de nouveaux clients tous les mois et augmentez rapidement
+              votre chiffre d'affaires.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 2: Soyez encore plus visible -->
+        <div
+          class="wave-card playing relative bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl p-8 shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 overflow-hidden"
+        >
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="card-content text-center text-white">
+            <!-- Icon -->
+            <div class="mb-6">
+              <svg
+                class="w-12 h-12 mx-auto"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"
+                />
+              </svg>
+            </div>
+            <!-- Title -->
+            <h3 class="text-2xl font-bold mb-4">Soyez encore plus visible</h3>
+            <!-- Description -->
+            <p class="text-blue-100 leading-relaxed">
+              Profitez d'une page dédiée à votre établissement et d'un
+              accompagnement dans votre communication.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 3: Évitez les no shows -->
+        <div
+          class="wave-card playing relative bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl p-8 shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 overflow-hidden md:col-span-2 lg:col-span-1"
+        >
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="card-content text-center text-white">
+            <!-- Icon -->
+            <div class="mb-6">
+              <svg
+                class="w-12 h-12 mx-auto"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"
+                />
+              </svg>
+            </div>
+            <!-- Title -->
+            <h3 class="text-2xl font-bold mb-4">Évitez les no shows</h3>
+            <!-- Description -->
+            <p class="text-blue-100 leading-relaxed">
+              Réduisez drastiquement les absences aux rendez-vous grâce à notre
+              système de rappel automatique et d'acompte.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="transition-all ease-out transform translate-y-0 translate-x-0 rotate-0 scale-100 opacity-100"
+      >
+        <div class="mt-12 text-center">
+          <div class="mb-6">
+            <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-2">
+              Une expérience privilégiée
+            </h3>
+            <p class="text-sm sm:text-base text-gray-600">
+              Inscrivez-vous pour un accès prioritaire et des avantages
+              exclusifs dès le lancement.
+            </p>
+          </div>
+          <a
+            class="btn-flip inline-flex justify-center items-center px-4 sm:px-6 py-2 sm:py-3 border border-transparent text-sm sm:text-base font-medium rounded-md text-white bg-[#002366] hover:bg-[#001c52] transition-colors"
+            href=""
+            ><span class="btn-text-original">
+              <span class="hidden sm:inline">Je rejoins en avant-première</span>
+            </span></a
+          >
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="Clients"
+      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24"
+    >
+      <div
+        class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center"
+      >
+        <!-- Left Content -->
+        <div class="space-y-8">
+          <!-- Badge -->
+          <div class="inline-block">
+            <span
+              class="inline-block rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white bg-[#002366] mb-4"
+            >
+              POUR LES CLIENTS
+            </span>
+          </div>
+
+          <!-- Heading -->
+          <h2
+            class="text-xl sm:text-3xl font-bold tracking-tight text-gray-900"
+          >
+            La beauté à portée de main
+          </h2>
+
+          <!-- Description -->
+          <p class="mt-4 text-sm sm:text-lg text-gray-600">
+            Trouvez et réservez instantanément vos prestations beauté préférées,
+            24h/24 et 7j/7. Accédez aux meilleurs professionnels du Maroc sans
+            attente et profitez de promotions exclusives sur vos prestations.
+          </p>
+        </div>
+
+        <!-- Right Image -->
+        <div class="relative">
+          <div class="div1 bg-blue-800">
+            <img src="img/62f0ad96295fa16c5dd31f54_feature.png" alt="" />
+          </div>
+
+          <!-- Optional decorative elements -->
+          <div
+            class="absolute -top-4 -left-4 w-24 ml-[25%] h-24 bg-blue-100 rounded-full opacity-50 -z-10"
+          ></div>
+          <div
+            class="absolute -bottom-6 -right-6 w-32 h-32 bg-blue-50 rounded-full opacity-30 -z-10"
+          ></div>
+        </div>
+      </div>
+    </section>
+    <section class="flex items-center justify-center p-4">
+      <div class="w-full max-w-2xl">
+        <!-- Form Container -->
+        <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+          <!-- Header Section -->
+          <div
+            class="bg-gradient-to-r from-blue-800 to-blue-900 px-4 py-6 text-center"
+          >
+            <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">
+              Rejoignez l'Avant-Première
+            </h1>
+            <p class="text-blue-100 text-lg">
+              Complétez le formulaire ci-dessous pour obtenir un accès
+              prioritaire
+            </p>
+          </div>
+
+          <!-- Form Section -->
+          <div class="max-w-3xl mx-auto bg-white p-8 shadow rounded">
+            <form id="clientForm" class="space-y-6">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Fullname -->
+                <div>
+                  <label
+                    for="clientFullname"
+                    class="block font-medium text-gray-700 mb-1"
+                    >Nom complet</label
+                  >
+                  <input
+                    id="clientFullname"
+                    name="clientFullname"
+                    type="text"
+                    class="w-full border rounded px-4 py-2"
+                    placeholder="Entrez votre nom complet"
+                  />
+                  <div
+                    id="clientFullnameError"
+                    class="text-red-500 text-sm mt-1"
+                  ></div>
+                </div>
+
+                <!-- Email -->
+                <div>
+                  <label
+                    for="clientEmail"
+                    class="block font-medium text-gray-700 mb-1"
+                    >Email</label
+                  >
+                  <input
+                    id="clientEmail"
+                    name="clientEmail"
+                    type="email"
+                    class="w-full border rounded px-4 py-2"
+                    placeholder="Entrez votre email"
+                  />
+                  <div
+                    id="clientEmailError"
+                    class="text-red-500 text-sm mt-1"
+                  ></div>
+                </div>
+
+                <!-- Phone -->
+                <div>
+                  <label
+                    for="clientPhone"
+                    class="block font-medium text-gray-700 mb-1"
+                    >Téléphone</label
+                  >
+                  <input
+                    id="clientPhone"
+                    name="clientPhone"
+                    type="tel"
+                    class="w-full border rounded px-4 py-2"
+                    placeholder="Entrez votre numéro"
+                  />
+                  <div
+                    id="clientPhoneError"
+                    class="text-red-500 text-sm mt-1"
+                  ></div>
+                </div>
+
+                <!-- City -->
+                <div>
+                  <label
+                    for="clientCity"
+                    class="block font-medium text-gray-700 mb-1"
+                    >Ville</label
+                  >
+                  <input
+                    id="clientCity"
+                    name="clientCity"
+                    type="text"
+                    class="w-full border rounded px-4 py-2"
+                    placeholder="Entrez votre ville"
+                  />
+                  <div
+                    id="clientCityError"
+                    class="text-red-500 text-sm mt-1"
+                  ></div>
+                </div>
+              </div>
+
+              <button
+                type="submit"
+                id="clientFormBtn"
+                class="w-full bg-blue-700 text-white py-3 rounded hover:bg-blue-800 transition"
+              >
+                Envoyer
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- new sectio -->
+    <section class="bg-gray-50 p-[4%]">
+      <!-- Header Section -->
+      <div class="text-center mb-12">
+        <div
+          class="inline-block rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white bg-[#002366] mb-4"
+        >
+          Une nouvelle expérience beauté
+        </div>
+        <p class="text-sm sm:text-xl font-medium text-[#002366] mb-8">
+          Rejoignez-nous en avant-première pour ne rien rater de nos actualités
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Card 1: Boostez votre chiffre d'affaires -->
+        <div
+          class="wave-card playing relative bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl p-8 shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 overflow-hidden"
+        >
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="card-content text-center text-white">
+            <!-- Icon -->
+            <div class="mb-6">
+              <svg
+                class="w-12 h-12 mx-auto"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <!-- <i class="fa-regular fa-clock  w-12 h-12 mx-auto"></i> -->
+                <path d="M7 14l3-3 3 3 5-5v4h2V7h-6v2l3 3-3 3-3-3-3 3v2z" />
+                <path d="M4 18h16v2H4z" />
+              </svg>
+            </div>
+            <!-- Title -->
+            <h3 class="text-2xl font-bold mb-4">
+              Un moment pour soi de qualité
+            </h3>
+            <!-- Description -->
+            <p class="text-blue-100 leading-relaxed">
+              Trouvez les meilleurs établissements de beauté proches de chez
+              vous en quelques secondes grâce à des avis 100% certifiés.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 2: Soyez encore plus visible -->
+        <div
+          class="wave-card playing relative bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl p-8 shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 overflow-hidden"
+        >
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="card-content text-center text-white">
+            <!-- Icon -->
+            <div class="mb-6">
+              <svg
+                class="w-12 h-12 mx-auto"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"
+                />
+              </svg>
+            </div>
+            <!-- Title -->
+            <h3 class="text-2xl font-bold mb-4">Réservation instantanée</h3>
+            <!-- Description -->
+            <p class="text-blue-100 leading-relaxed">
+              Prenez rendez-vous à tout moment, même en dehors des heures
+              d'ouverture habituelles.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 3: Évitez les no shows -->
+        <div
+          class="wave-card playing relative bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl p-8 shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 overflow-hidden md:col-span-2 lg:col-span-1"
+        >
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="card-content text-center text-white">
+            <!-- Icon -->
+            <div class="mb-6">
+              <svg
+                class="w-12 h-12 mx-auto"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"
+                />
+              </svg>
+            </div>
+            <!-- Title -->
+            <h3 class="text-2xl font-bold mb-4">
+              Bénéficiez d'offres exclusives
+            </h3>
+            <!-- Description -->
+            <p class="text-blue-100 leading-relaxed">
+              Accédez à des promotions et réductions disponibles uniquement via
+              notre plateforme.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="mt-12 text-center">
+        <a
+          class="btn-flip inline-flex justify-center items-center px-4 sm:px-6 py-2 sm:py-3 border border-transparent text-sm sm:text-base font-medium rounded-md text-white bg-[#002366] hover:bg-[#001c52] transition-colors"
+          href=""
+        >
+          <span class="hidden sm:inline">Je rejoins en avant-première</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ggh section  -->
+
+    <section
+      id="Pourquoi"
+      class="max-w-[90%] mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24"
+    >
+      <div class="text-center mb-16">
+        <div
+          class="transition-all ease-out transform translate-y-0 translate-x-0 rotate-0 scale-100 opacity-100"
+        >
+          <div
+            class="inline-block rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white bg-[#002366] mb-4"
+          >
+            Pourquoi rejoindre Wellbe
+          </div>
+          <div
+            class="transition-all ease-out transform translate-y-0 translate-x-0 rotate-0 scale-100 opacity-100"
+          >
+            <h2 class="sm:text-3xl font-bold text-gray-900">
+              La plateforme pensée pour tous
+            </h2>
+          </div>
+        </div>
+      </div>
+      <div
+        class="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16 items-center"
+      >
+        <!-- Left Image -->
+        <div class="lg:col-span-2">
+          <div
+            class="relative h-[350px] w-[500px] md:h-[500px] rounded-lg overflow-hidden"
+          >
+            <img
+              src="img/photo-1553544260-f87e671974ee.avif"
+              alt="Trois femmes détendues ensemble, représentant l'expérience beauté moderne"
+              class="w-full h-full object-cover object-center"
+            />
+          </div>
+        </div>
+
+        <!-- Right Content -->
+        <div class="lg:col-span-3 space-y-8">
+          <!-- Main Heading -->
+          <div
+            class="transition-all ease-out transform translate-y-0 translate-x-0 rotate-0 scale-100 opacity-100"
+          >
+            <p class="text-sm sm:text-lg text-gray-600 mb-6">
+              Découvrez la révolution dans l'expérience beauté au Maroc bientôt
+              disponible
+            </p>
+          </div>
+
+          <!-- Features Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Feature 1: Réservation instantanée -->
+            <div
+              class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-200"
+            >
+              <h3 class="text-xl font-bold text-gray-900 mb-4">
+                Réservation instantanée
+              </h3>
+              <p class="text-gray-600 leading-relaxed">
+                Plus d'attente au téléphone ! Réservez en 30 secondes chrono,
+                confirmez instantanément et recevez vos rappels automatiques.
+              </p>
+            </div>
+
+            <!-- Feature 2: Confiance & Sécurité -->
+            <div
+              class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-200"
+            >
+              <h3 class="text-xl font-bold text-gray-900 mb-4">
+                Confiance & Sécurité
+              </h3>
+              <p class="text-gray-600 leading-relaxed">
+                Profils vérifiés, paiements sécurisés et système d'évaluation
+                transparent pour une expérience en toute sérénité côté clients
+                et professionnels.
+              </p>
+            </div>
+
+            <!-- Feature 3: Visibilité & Personnalisation (Highlighted) -->
+            <div
+              class="bg-white p-6 rounded-xl shadow-md border-2 border-gray-100 hover:shadow-lg transition-all duration-200"
+            >
+              <h3 class="text-xl font-bold text-gray-900 mb-4">
+                Visibilité & Personnalisation
+              </h3>
+              <p class="text-gray-600 leading-relaxed">
+                Augmentez votre clientèle grâce à notre plateforme et bénéficiez
+                de recommandations personnalisées basées sur vos préférences et
+                besoins.
+              </p>
+            </div>
+
+            <!-- Feature 4: Qualité garantie -->
+            <div
+              class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-200"
+            >
+              <h3 class="text-xl font-bold text-gray-900 mb-4">
+                Qualité garantie
+              </h3>
+              <p class="text-gray-600 leading-relaxed">
+                Rejoignez un réseau premium de professionnels qualifiés et
+                découvrez les meilleurs services beauté de votre région.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="w-full bg-[#002366] text-white relative">
+      <div class="container mx-auto px-6 py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-2 ml-[8%] gap-12 items-start">
+          <!-- Left Column - Brand Info -->
+          <div class="space-y-6">
+            <img class="h-12 w-auto mb-4" src="img/logo-white.png" alt="" />
+            <p class="text-sm text-white/80 max-w-xs mb-4">
+              La première plateforme beauté au Maroc qui connecte les clients
+              aux meilleurs professionnels de beauté.
+            </p>
+
+            <!-- Social Media Icons -->
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="text-gray-300 hover:text-white transition-colors duration-200"
+              >
+                <i class="fab fa-instagram text-xl"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-300 hover:text-white transition-colors duration-200"
+              >
+                <i class="fab fa-facebook text-xl"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-300 hover:text-white transition-colors duration-200"
+              >
+                <i class="fab fa-linkedin text-xl"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column - CTA -->
+          <div class="space-y-6">
+            <h3 class="text-lg font-semibold mb-4">
+              Prêt à transformer la beauté au Maroc ?
+            </h3>
+
+            <div class="space-y-4">
+              <button
+                class="w-full py-3 px-6 border border-white/30 text-white rounded-md hover:bg-white/10 transition-colors duration-200 text-sm"
+              >
+                Rejoindre comme Client
+              </button>
+              <button
+                class="w-full py-3 px-6 border border-white/30 text-white rounded-md hover:bg-white/10 transition-colors duration-200 text-sm"
+              >
+                Rejoindre comme Professionnel
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="border-t border-white/20 mt-12 pt-6">
+          <p class="text-center text-gray-400 text-sm">
+            © 2025 WELLBE. Tous droits réservés.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>

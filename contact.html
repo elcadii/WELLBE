@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulaire de Contact</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="contact.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- =========header=========== -->
+    <header>
+      <img id="logo" src="img/logo-blue.png" alt="logo" />
+      <nav>
+        <a href="index.html#Accueil">Accueil</a>
+        <a href="index.html#Professionnels">Professionnels</a>
+        <a href="index.html#Clients">Clients</a>
+        <a href="index.html#Pourquoi">Pourquoi nous rejoindre?</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+    <div class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+      <div
+        class="w-full max-w-4xl mt-[6%] bg-white rounded-2xl shadow-lg overflow-hidden"
+      >
+        <!-- Header -->
+        <div class="bg-blue-900 px-8 py-4 text-white">
+          <h1 class="text-2xl font-semibold mb-2">Envoyez-nous un message</h1>
+          <p class="text-blue-100 text-sm">
+            Remplissez le formulaire ci-dessous et nous vous répondrons
+            rapidement.
+          </p>
+        </div>
+
+        <!-- Form -->
+        <div class="p-4">
+          <form id="contactForm" class="space-y-6">
+            <!-- Name & Email -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <!-- Full Name -->
+              <div>
+                <label
+                  class="flex pb-[10px] items-center text-gray-600 text-sm font-medium"
+                >
+                  <i class="fas fa-user text-gray-400 mr-2"></i>
+                  Nom complet <span class="text-red-500 ml-1">*</span>
+                </label>
+                <input
+                  type="text"
+                  name="fullName"
+                  placeholder="Votre nom complet"
+                  class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+                />
+                <div
+                  id="error-fullName"
+                  class="text-red-500 text-sm mt-1"
+                ></div>
+              </div>
+
+              <!-- Email -->
+              <div>
+                <label
+                  class="flex pb-[10px] items-center text-gray-600 text-sm font-medium"
+                >
+                  <i class="fas fa-envelope text-gray-400 mr-2"></i>
+                  Email <span class="text-red-500 ml-1">*</span>
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="votre@email.com"
+                  class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+                />
+                <div id="error-email" class="text-red-500 text-sm mt-1"></div>
+              </div>
+            </div>
+
+            <!-- Phone & Company -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <!-- Phone -->
+              <div>
+                <label
+                  class="flex pb-[10px] items-center text-gray-600 text-sm font-medium"
+                >
+                  <i class="fas fa-phone text-gray-400 mr-2"></i>
+                  Téléphone
+                </label>
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="+212 6XX XXX XXX"
+                  class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+                />
+              </div>
+
+              <!-- Company -->
+              <div>
+                <label
+                  class="flex pb-[10px] items-center text-gray-600 text-sm font-medium"
+                >
+                  <i class="fas fa-building text-gray-400 mr-2"></i>
+                  Entreprise/Salon
+                </label>
+                <input
+                  type="text"
+                  name="company"
+                  placeholder="Nom de votre entreprise"
+                  class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+                />
+              </div>
+            </div>
+
+            <!-- Subject -->
+            <div>
+              <label
+                class="flex pb-[10px] items-center text-gray-600 text-sm font-medium"
+              >
+                <i class="fas fa-comment text-gray-400 mr-2"></i>
+                Sujet <span class="text-red-500 ml-1">*</span>
+              </label>
+              <input
+                type="text"
+                name="subject"
+                placeholder="Sujet de votre message"
+                class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+              />
+              <div id="error-subject" class="text-red-500 text-sm mt-1"></div>
+            </div>
+
+            <!-- Message -->
+            <div>
+              <label
+                class="flex pb-[10px] items-start text-gray-600 text-sm font-medium"
+              >
+                Message <span class="text-red-500 ml-1">*</span>
+              </label>
+              <textarea
+                name="message"
+                rows="6"
+                placeholder="Décrivez votre demande en détail..."
+                class="w-full h-[18vh] px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none resize-none"
+              ></textarea>
+              <div id="error-message" class="text-red-500 text-sm mt-1"></div>
+            </div>
+
+            <!-- Submit -->
+            <div class="">
+              <button
+                type="submit"
+                class="w-full bg-blue-900 text-white py-4 px-6 rounded-lg font-medium hover:bg-blue-800 focus:ring-4 focus:ring-blue-200 transition-all duration-200 transform hover:scale-[1.02] active:scale-[0.98]"
+              >
+                Envoyer le Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Success Message -->
+    <div
+      id="successMessage"
+      class="fixed top-4 right-[-20px] bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg transform translate-x-full transition-transform duration-300"
+    >
+      <div class="flex items-center">
+        <i class="fas fa-check-circle mr-2"></i>
+        Message envoyé avec succès !
+      </div>
+    </div>
+
+    <!-- Footer (same as before, unchanged) -->
+    <!-- ... -->
+    <footer class="w-full bg-[#002366] text-white relative">
+      <div class="container mx-auto px-6 py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-2 ml-[8%] gap-12 items-start">
+          <!-- Left Column - Brand Info -->
+          <div class="space-y-6">
+            <img class="h-12 w-auto mb-4" src="img/logo-white.png" alt="" />
+            <p class="text-sm text-white/80 max-w-xs mb-4">
+              La première plateforme beauté au Maroc qui connecte les clients
+              aux meilleurs professionnels de beauté.
+            </p>
+
+            <!-- Social Media Icons -->
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="text-gray-300 hover:text-white transition-colors duration-200"
+              >
+                <i class="fab fa-instagram text-xl"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-300 hover:text-white transition-colors duration-200"
+              >
+                <i class="fab fa-facebook text-xl"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-300 hover:text-white transition-colors duration-200"
+              >
+                <i class="fab fa-linkedin text-xl"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column - CTA -->
+          <div class="space-y-6">
+            <h3 class="text-lg font-semibold mb-4">
+              Prêt à transformer la beauté au Maroc ?
+            </h3>
+
+            <div class="space-y-4">
+              <button
+                class="w-full py-3 px-6 border border-white/30 text-white rounded-md hover:bg-white/10 transition-colors duration-200 text-sm"
+              >
+                Rejoindre comme Client
+              </button>
+              <button
+                class="w-full py-3 px-6 border border-white/30 text-white rounded-md hover:bg-white/10 transition-colors duration-200 text-sm"
+              >
+                Rejoindre comme Professionnel
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="border-t border-white/20 mt-12 pt-6">
+          <p class="text-center text-gray-400 text-sm">
+            © 2025 WELLBE. Tous droits réservés.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="contact.js"></script>
+  </body>
+</html>

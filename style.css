@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
+
+:root {
+  --primary-bleu: #002366;
+}
+
+body {
+  height: 5000px;
+}
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color: #fff;
+  padding: 0 15px;
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  transition: 0.4s ease-in-out;
+  z-index: 1000;
+}
+header.active {
+  background-color: #ffffff;
+  height: 10vh;
+  transition: 0.4s ease-in-out;
+  box-shadow: 0 14px 10px rgba(0, 0, 0, 0.1);
+}
+
+header img {
+  width: 10%;
+}
+
+/* navbare link hover */
+nav a {
+  position: relative;
+  text-decoration: none;
+  color:#ffffff;
+  font-size: 16px;
+  text-transform: capitalize;
+  margin: 0 20px;
+  font-weight: 600;
+  transition: color 0.3s ease-in-out;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--primary-bleu);
+  transition: width 0.3s ease-in-out;
+}
+
+nav a:hover {
+  color: var(--primary-bleu);
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* hero section */
+.hero {
+  background-image: url("img/62edee73bf75bb4b3bdeb529_slider-bg-01.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: overlay;
+}
+.hero .container {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  position: absolute;
+  top: 35%;
+  left: 6%;
+}
+
+.hero .containe button {
+  width: 25%;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.wave-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.wave-card.playing .wave {
+  position: absolute;
+  width: 540px;
+  height: 700px;
+  opacity: 0.6;
+  left: 50%;
+  top: 130%;
+  margin-left: -270px;
+  margin-top: -350px;
+  background: linear-gradient(744deg, #002366, #003d99 60%, #0056cc);
+  border-radius: 40%;
+  animation: wave 80s linear infinite;
+}
+
+.wave-card.playing .wave:nth-child(1) {
+  animation-duration: 5s;
+  opacity: 0.4;
+}
+
+.wave-card.playing .wave:nth-child(2) {
+  animation-duration: 7s;
+  opacity: 0.5;
+}
+
+.wave-card.playing .wave:nth-child(3) {
+  animation-duration: 8s;
+  opacity: 0.6;
+}
+
+.card-content {
+  position: relative;
+  z-index: 10;
+}
+
+.div1{
+  border-radius: 49% 51% 68% 32% / 39% 30% 70% 61% ;
+  width: 85%;
+  height: 65vh;
+  margin-left: 25%;
+}
