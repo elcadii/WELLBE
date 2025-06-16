@@ -848,6 +848,40 @@
         </div>
       </div>
     </footer>
+    <!-- Conteneur du bouton flottant -->
+    <div class="floating-button-container">
+      <!-- Boutons secondaires -->
+      <div class="secondary-buttons" id="secondaryButtons">
+        <div class="secondary-button whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </div>
+        <div class="secondary-button email">
+          <i class="fas fa-envelope"></i>
+        </div>
+      </div>
+      <!-- Bouton principal -->
+      <div class="main-button" id="mainButton">
+        <i class="fas fa-plus"></i>
+      </div>
+    </div>
     <script src="main.js"></script>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      // Gestionnaire d'événements pour le bouton principal
+      const mainButton = document.getElementById("mainButton");
+      const secondaryButtons = document.getElementById("secondaryButtons");
+
+      mainButton.addEventListener("click", () => {
+        if (secondaryButtons.style.display === "flex") {
+          secondaryButtons.style.display = "none";
+        } else {
+          secondaryButtons.style.display = "flex";
+        }
+      });
+    </script>
   </body>
 </html>

@@ -147,3 +147,79 @@ nav a:hover::after {
   height: 65vh;
   margin-left: 25%;
 }
+
+/* Conteneur principal du bouton flottant */
+    .floating-button-container {
+      position: fixed;
+      bottom: 6%;
+      left: 3%;
+      z-index: 1000;
+    }
+
+    /* Bouton principal */
+    .main-button {
+      background-color: #28a745;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      animation: pulsate 1.5s infinite ease-in-out;
+      transition: transform 0.3s ease;
+    }
+
+    /* Animation de pulsation */
+    @keyframes pulsate {
+      0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(40, 167, 69, 0.6), 0 0 20px rgba(40, 167, 69, 0.4);
+      }
+      50% {
+        transform: scale(1.2);
+        box-shadow: 0 0 15px rgba(40, 167, 69, 0.8), 0 0 30px rgba(40, 167, 69, 0.6);
+      }
+    }
+
+    /* Icônes secondaires */
+    .secondary-buttons {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .secondary-button {
+      background-color: white;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+    }
+
+    .secondary-button i {
+      font-size: 20px;
+    }
+
+    .secondary-button.whatsapp {
+      background-color: #25d366;
+      color: white;
+    }
+
+    .secondary-button.email {
+      background-color: #f44336;
+      color: white;
+    }
+
+    /* Hover sur le bouton principal */
+    .main-button:hover {
+      transform: scale(1.1);
+    }
