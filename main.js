@@ -31,6 +31,23 @@ mainButton.addEventListener("click", () => {
   }
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const desctopnavbar = document.getElementById("desctopnavbar");
+  const openButton = document.querySelector("header button"); // زر فتح القائمة
+  const closeButton = document.querySelector(".fixed button"); // زر إغلاق القائمة
+  const mobileMenu = document.querySelector(".fixed"); // المينيو نفسها
+
+  // فتح القائمة
+  openButton.addEventListener("click", () => {
+    mobileMenu.classList.remove("translate-x-full");
+  });
+
+  // إغلاق القائمة
+  closeButton.addEventListener("click", () => {
+    mobileMenu.classList.add("translate-x-full");
+  });
+});
+
 // form Professionnels validation
 
 document

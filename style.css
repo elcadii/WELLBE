@@ -22,7 +22,7 @@ header {
   height: 8vh;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   transition: 0.4s ease-in-out;
   z-index: 1000;
 }
@@ -33,9 +33,7 @@ header.active {
   box-shadow: 0 14px 10px rgba(0, 0, 0, 0.1);
 }
 
-header img {
-  width: 10%;
-}
+
 
 /* navbare link hover */
 nav a {
